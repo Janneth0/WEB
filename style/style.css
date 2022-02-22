@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
+    /* css general */
+*{margin: 0;padding: 0;}
+.contenedor{
+    width: 40%;
+    margin: 10px auto;
+    background-color: rgb(119, 183, 240);
+    padding: 20px;
+    border-radius: 15px;
+    font-family: 'Inconsolata', monospace;
+
+}
+body{
+    background-color: rgb(164, 207, 245);
+}
+nav li{
+    background-color: rgb(88, 88, 214);  
+    padding: 10px;
+    border-radius: 10px; 
+}
+label,input{
+    margin: 15px 3px;
+}
+.cont_img,h1,.cont_btn,footer{
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color: aliceblue;
+}
+img{
+    border: 2px black solid;
+    border-radius: 10px;
+}
+.img_genero>img{
+    width: 40%;
+}
+.img_genero{
+ text-align: center;
+}
+.cont_btn{
+    margin-top: 10px;
+}
+/* vista mobile */
+@media only screen and (min-width: 0px) and (max-width: 767px){
+    .contenedor{
+        width: 80%;
+    }
+	.gridContainer{
+		display: grid; grid-template-areas:
+		"header header" "navIzq navDer"; 
+		/* grid-template-columns: 50% 50%; */
+		/* grid-template-rows: 100px 70px auto 1fr 100px; */
+	}
+    #img_logo{
+        width: 100px;
+        border: none ;
+    }
+	header{
+        grid-area:header;
+        display: flex;
+        justify-content: center;
+    } 
+    div.navIzq{
+        grid-area: navIzq;
+    } 
+   
+    .navIzq ul, .navDer ul {
+        display: flex;
+         justify-content: space-around;
+        } 
+        li{
+            padding: 10px; list-style-type: none;
+        } 
+        div.navDer{
+            grid-area: navDer;
+        } 	
+        section.parrafo{
+            grid-area: parrafo;
+        } 
+        section.imgParrafo{
+            grid-area: img;
+        } 
+        footer{
+            grid-area: footer;
+            display: flex;
+            justify-content: space-around;
+            padding-top: 20px;
+        }
+    }
+
+
+
+
+    /* vista desktop */
+@media only screen and (min-width: 768px){
+   
+    #img_logo{
+        width: 60px;
+        border: none;
+    }
+	.gridContainer{
+			display: grid;grid-template-areas:
+			"navIzq navIzq header header navDer navDer" ;
+             grid-template-columns: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;
+            /* grid-template-rows: 100px auto 200px;  */
+        }
+		header{grid-area:header; text-align: center;}
+		div.navIzq{grid-area: navIzq;} .navIzq ul, .navDer ul {display: flex; justify-content: space-around;}
+		li{padding: 10px; list-style-type: none; position: relative; top: 20px;}
+		div.navDer{grid-area: navDer;}
+		/* section.parrafo{grid-area: parrafo;}
+		section.imgParrafo{grid-area: img;} */
+		/* footer{grid-area: footer;display:flex; justify-content: space-around;} */
+    }
