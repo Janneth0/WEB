@@ -51,8 +51,6 @@ img{
 	.gridContainer{
 		display: grid; grid-template-areas:
 		"header header" "navIzq navDer"; 
-		/* grid-template-columns: 50% 50%; */
-		/* grid-template-rows: 100px 70px auto 1fr 100px; */
 	}
     #img_logo{
         width: 100px;
@@ -105,13 +103,9 @@ img{
 			display: grid;grid-template-areas:
 			"navIzq navIzq header header navDer navDer" ;
              grid-template-columns: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;
-            /* grid-template-rows: 100px auto 200px;  */
         }
 		header{grid-area:header; text-align: center;}
 		div.navIzq{grid-area: navIzq;} .navIzq ul, .navDer ul {display: flex; justify-content: space-around;}
 		li{padding: 10px; list-style-type: none; position: relative; top: 20px;}
 		div.navDer{grid-area: navDer;}
-		/* section.parrafo{grid-area: parrafo;}
-		section.imgParrafo{grid-area: img;} */
-		/* footer{grid-area: footer;display:flex; justify-content: space-around;} */
     }
