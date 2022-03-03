@@ -2,9 +2,8 @@
 
     /* css general */
 *{margin: 0;padding: 0;}
-.contenedor{
-    width: 40%;
-    margin: 10px auto;
+.container{
+    margin: 20px auto;
     background-color: rgb(119, 183, 240);
     padding: 20px;
     border-radius: 15px;
@@ -18,6 +17,11 @@ nav li{
     background-color: rgb(88, 88, 214);  
     padding: 10px;
     border-radius: 10px; 
+    text-decoration: none;
+}
+nav li:hover{
+    color: rgb(88, 88, 214); 
+    background-color: aliceblue;
 }
 label,input{
     margin: 15px 3px;
@@ -30,15 +34,22 @@ a{
     text-decoration: none;
     color: aliceblue;
 }
+a:hover{
+    text-decoration: none;
+}
+
+
 img{
     border: 2px black solid;
     border-radius: 10px;
 }
 .img_genero>img{
-    width: 40%;
+    width: 100%;
+    height: 80%;
 }
 .img_genero{
  text-align: center;
+ margin-top: 5%;
 }
 .cont_btn{
     margin-top: 10px;
