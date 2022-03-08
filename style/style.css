@@ -2,7 +2,25 @@
 
     /* css general */
 *{margin: 0;padding: 0;}
-.container{
+#bts{
+    background-color: rgba(6, 1, 17, 0.897);
+    color: aliceblue;
+}
+#ateez{
+    background-color: rgba(61, 12, 6, 0.945);
+    color: aliceblue;
+}
+#skz{
+
+    background-color: rgba(5, 4, 66, 0.945);
+    color: aliceblue;
+}
+section{
+    margin-bottom: 20px;
+    padding: 30px 0px;
+}
+
+.contenedor{
     margin: 20px auto;
     background-color: rgb(119, 183, 240);
     padding: 20px;
@@ -63,8 +81,9 @@ img{
 		display: grid; grid-template-areas:
 		"header header" "navIzq navDer"; 
 	}
-    #img_logo{
+    .img_logo{
         width: 100px;
+        margin: 10px;
         border: none ;
     }
 	header{
@@ -106,8 +125,9 @@ img{
     /* vista desktop */
 @media only screen and (min-width: 768px){
    
-    #img_logo{
-        width: 60px;
+    .img_logo{
+        width: 120px;
+        margin: 10px;
         border: none;
     }
 	.gridContainer{
