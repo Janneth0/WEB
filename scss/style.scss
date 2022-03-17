@@ -4,17 +4,32 @@
 	margin: 0;
 	padding: 0;
 }
-#bts,#ateez,#skz{
-    color: aliceblue;
+$bblack:#060111e5;
+$ared:#3d0c06f1;
+$sblue:blue#050442f1;
+$fondos:(
+	bts:$bblack ,
+	ateez:$ared,
+	skz:$sblue
+);
+@mixin sizes($width,$height) {
+	height: $height;
+	width: $width;	
+}
+
+@each $f,$color in $fondos{
+	##{$f}{
+		background-color: $color;
+	}
 }
 #bts {
-	background-color: rgba(6, 1, 17, 0.897);
+	color: aliceblue;
 }
 #ateez {
-	background-color: rgba(61, 12, 6, 0.945);
+	@extend #bts;
 }
 #skz {
-	background-color: rgba(5, 4, 66, 0.945);
+	@extend #bts;
 }
 section {
 	margin-bottom: 20px;
@@ -42,25 +57,18 @@ nav {
 		}
 	}
 }
-label {
+label,input {
 	margin: 15px 3px;
 }
-input {
-	margin: 15px 3px;
-}
-.cont_img {
-	text-align: center;
-}
-h1 {
+
+.cont_img,h1,footer {
 	text-align: center;
 }
 .cont_btn {
 	text-align: center;
 	margin-top: 10px;
 }
-footer {
-	text-align: center;
-}
+
 a {
 	text-decoration: none;
 	color: aliceblue;
@@ -74,8 +82,7 @@ img {
 }
 .img_genero {
 	>img {
-		width: 100%;
-		height: 80%;
+		@include sizes(100%,80% )
 	}
 	text-align: center;
 	margin-top: 5%;
@@ -89,8 +96,7 @@ img {
 		grid-template-areas: "header header" "navIzq navDer";
 	}
 	.img_logo {
-		width: 100px;
-		margin: 10px;
+		@include sizes(100px,auto);
 		border: none;
 	}
 	header {
@@ -135,7 +141,7 @@ img {
 }
 @media only screen and (min-width: 768px) {
 	.img_logo {
-		width: 120px;
+		@include sizes(120px,auto );
 		margin: 10px;
 		border: none;
 	}
