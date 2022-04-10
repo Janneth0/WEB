@@ -10,7 +10,7 @@
   background-color: #3d0c06f1; }
 
 #skz {
-  background-color: blue #050442f1; }
+  background-color: #050442f1; }
 
 #bts, #ateez, #skz {
   color: aliceblue; }
@@ -38,10 +38,14 @@ nav li {
     color: #5858d6;
     background-color: aliceblue; }
 
-label, input {
+label,
+input {
   margin: 15px 3px; }
 
-.cont_img, h1, h2, footer {
+.cont_img,
+h1,
+h2,
+footer {
   text-align: center; }
 
 .cont_btn {
@@ -54,9 +58,21 @@ a {
   a:hover {
     text-decoration: none; }
 
-img {
-  border: 2px black solid;
-  border-radius: 10px; }
+.images {
+  width: 100%; }
+
+.div1 {
+  position: relative; }
+
+.div1 .div2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: .5s; }
+
+.div1:hover .div2 {
+  opacity: 1; }
 
 .img_genero {
   text-align: center;
