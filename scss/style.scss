@@ -1,4 +1,5 @@
 @import "https://fonts.googleapis.com/css2?family=Inconsolata&display=swap";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:ital@1&display=swap');
 
 * {
 	margin: 0;
@@ -37,6 +38,10 @@ $color in $fondos {
 }
 
 section {
+	h2{
+		color: rgb(219, 247, 238);
+		font-family: 'Josefin Sans', sans-serif;
+	}
 	margin-bottom: 20px;
 	padding: 30px 0px;
 }
